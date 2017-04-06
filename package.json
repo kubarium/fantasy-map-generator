@@ -1,7 +1,7 @@
 {
   "name": "fantasy-map-generator",
   "version": "1.0.0",
-  "description": "How to use create-react-app with a custom Node API on Heroku",
+  "description": "A React App that generates random fantasy maps with addition to receiving minimal user input",
   "engines": {
     "node": "6.9.x"
   },

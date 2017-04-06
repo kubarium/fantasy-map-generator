@@ -1,0 +1,69 @@
+grassland
+taiga
+tundra
+alpine
+forest
+rainforest
+swamp
+ice sheet
+desert
+city
+river
+road
+town
+village
+keep
+castle
+fort
+ruins
+camp
+garrison
+bridge
+jungle
+atoll
+sea ice (glacier, pieces)
+mine
+farm
+moss fields
+clear (dirt)
+cave
+cliff
+sand dunes
+oasis
+rock
+hill
+mountain
+volcano
+lava river
+geyser
+sinkhole
+fishing spot
+holy spot (stonehenge, pyramid)
+temple
+shrine
+light forest
+dense forest
+hills with forest
+hills with jungle
+decidious trees
+evergreen trees
+bog
+steppes
+rocky desert
+cactus light
+cactus heavy
+sea (salty)
+lake (fresh)
+lake (soda)
+ocean
+coastal reef
+sea reef
+ruined city
+ruined village
+ruined town
+holy forest
+dead forest
+hills with dead forest
+sand
+forested swamp
+forested bog

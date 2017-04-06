@@ -1,0 +1,17 @@
+.tile
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+  outline: 1px dotted rebeccapurple;
+  position: absolute;
+
+
+$x: 0;
+$y: 0;
+@while $x < 64 
+  @while $y < 64 
+    .tile-#{$x}-#{$y} { left: 64px * $y; top:64px * $x; }
+    $y: $y + 1;
+  
+  $y: 0;
+  $x: $x + 1;

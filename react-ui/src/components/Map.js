@@ -5,6 +5,9 @@ import React, {Component} from 'react'
 import className from 'classnames'
 
 class Map extends Component {
+    stylize = () => {
+
+    }
     render() {
         const tiles = [...Array(64).keys()].map((x, x_index) => [...Array(64).keys()].map((y, y_index) => (
             <li
@@ -15,8 +18,8 @@ class Map extends Component {
                 key={`${x_index}-${y_index}`}>
                 <span className="tile-label">{`${x_index}-${y_index}`}</span>
                 <div className="layers">
-                <img src={`/pieces/island-${x_index}.png`} width="64" height="64" />
-
+                <img src={`/pieces/cave-${x_index}.png`} style={{top:10, left:10, zIndex:2}} />
+                <img src={`/pieces/blank.png`} />
                 </div>
             </li>
 

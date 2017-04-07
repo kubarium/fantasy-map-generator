@@ -8,6 +8,11 @@
 .tile-label {
   position: absolute; }
 
+.tile img {
+  position: absolute;
+  width: 64px;
+  height: 64px; }
+
 .map {
   width: 100%;
   height: 500px;

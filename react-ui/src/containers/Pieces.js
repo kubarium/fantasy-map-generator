@@ -3,24 +3,24 @@ import * as Actions from '../Actions'
 import Pieces from '../components/Pieces'
 import { connect } from 'react-redux'
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state, ownProps) => {    
     return {
-        pieces: state.pieces
+        pieces: state.pieces.filter((piece,index)=>index<10)
     }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        dispatch1: () => {
-            dispatch(actionCreator)
+        loadPieces: () => {           
+            dispatch(Actions.pieces())
         }
     }
 }
 
-const mergeProps = (stateProps, dispatchProps, ownProps) => {
+/*const mergeProps = (stateProps, dispatchProps, ownProps) => {
     return {
         mergeProp: mergePropVal
     }
-}
+}*/
 
-export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(Pieces)
+export default connect(mapStateToProps, mapDispatchToProps)(Pieces)

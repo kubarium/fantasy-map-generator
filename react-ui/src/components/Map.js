@@ -2,6 +2,7 @@ import '../styles/Tile.css'
 
 import React, {Component} from 'react'
 
+import Tile from './Tile'
 import className from 'classnames'
 
 class Map extends Component {
@@ -17,10 +18,7 @@ class Map extends Component {
             })}
                 key={`${x_index}-${y_index}`}>
                 <span className="tile-label">{`${x_index}-${y_index}`}</span>
-                <div className="layers">
-                <img src={`/pieces/cave-${x_index}.png`} style={{top:10, left:10, zIndex:2}} />
-                <img src={`/pieces/blank.png`} />
-                </div>
+                <Tile/>
             </li>
 
         )))

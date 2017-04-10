@@ -6,10 +6,13 @@ import App from './components/App'
 import { Provider } from 'react-redux'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Reducers from './Reducers'
+import reducers from './Reducers'
 import thunkMiddleware from 'redux-thunk'
 
-const store = createStore(Reducers)
+const reducersInitialState = {pieces:[]}
+
+const store = createStore(reducers, reducersInitialState, applyMiddleware(thunkMiddleware))
+
 window.store = store
 
 ReactDOM.render(

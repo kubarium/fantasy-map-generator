@@ -1,9 +1,8 @@
 import * as Actions from './Actions'
 
-const ReducersInitialState = {}
-export const Reducers = (state = ReducersInitialState, action) => {
+const reducers = (state, action) => {
     switch (action.type) {
-        case Actions.PIECES_SUCCESS:
+        case Actions.PIECES_SUCCESS:            
             return {
                 ...state,
                 pieces:action.pieces
@@ -14,3 +13,5 @@ export const Reducers = (state = ReducersInitialState, action) => {
             return state
     }
 }
+
+export default reducers

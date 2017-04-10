@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Tile extends Component {
     render () {
         return (
-            <div>
+            <div className="layers">
                 
             </div>
         )

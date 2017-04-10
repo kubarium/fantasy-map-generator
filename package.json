@@ -27,5 +27,7 @@
     "react"
   ],
   "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp-watch": "^4.3.11"
+  }
 }

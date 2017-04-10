@@ -4,7 +4,7 @@ import { Col, Grid, Navbar, Row } from 'react-bootstrap'
 import React, { Component } from 'react'
 
 import Map from './Map'
-import Pieces from './Pieces'
+import Pieces from '../containers/Pieces'
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +12,9 @@ class App extends Component {
     this.state = {
       
     }
+    
   }
+
 
 
   render() {

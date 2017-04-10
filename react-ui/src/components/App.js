@@ -4,6 +4,7 @@ import { Col, Grid, Navbar, Row } from 'react-bootstrap'
 import React, { Component } from 'react'
 
 import Map from './Map'
+import Pieces from './Pieces'
 
 class App extends Component {
   constructor(props) {
@@ -36,7 +37,7 @@ class App extends Component {
       <Grid>
         <Row>
           <Col sm={4}>
-          
+            <Pieces/>
           </Col>
           <Col sm={8} md={8}><Map/></Col>
         </Row>

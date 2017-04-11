@@ -1,0 +1,10 @@
+.pieces img{
+    width: 32px;
+    height: 32px;
+}
+
+.pieces .list-group-item{
+    border-radius: 0;
+    width: auto;
+    display: inline-block;
+}

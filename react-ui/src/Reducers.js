@@ -9,6 +9,12 @@ const reducers = (state, action) => {
             }
         case Actions.PIECES_FAILURE:
             throw new Error(action.error)
+        case Actions.SELECT_TILE:
+            return {
+                ...state,
+                selectedTile:action.id
+            }
+            throw new Error(action.error)
         default:
             return state
     }

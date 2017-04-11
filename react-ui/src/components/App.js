@@ -3,20 +3,10 @@ import '../styles/App.css'
 import { Col, Grid, Navbar, Row } from 'react-bootstrap'
 import React, { Component } from 'react'
 
-import Map from './Map'
+import Map from '../containers/Map'
 import Pieces from '../containers/Pieces'
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      
-    }
-    
-  }
-
-
-
   render() {
     return (
       <article>

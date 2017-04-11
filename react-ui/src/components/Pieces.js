@@ -1,3 +1,5 @@
+import '../styles/Pieces.css'
+
 import {ListGroup, ListGroupItem, Panel, PanelGroup} from 'react-bootstrap'
 import React, {Component} from 'react'
 
@@ -12,13 +14,13 @@ class Pieces extends Component {
     
     render() {
         return (
-            <PanelGroup defaultActiveKey="1" accordion>
+            <PanelGroup defaultActiveKey="1" accordion className="pieces">
                 <Panel header="Side Pieces" eventKey="1">
-                    <ListGroup fill>
+                    <ListGroup >
                         {this
                             .props
                             .pieces
-                            .map((piece, index) => <ListGroupItem key={`piece-${index}`}><img src={`/pieces/${piece}`}/></ListGroupItem>)}
+                            .map((piece, index) => <ListGroupItem listItem={false} onClick={(event)=>console.log(event)} key={`piece-${index}`}><img src={`/pieces/${piece}`}/></ListGroupItem>)}
                     </ListGroup>
                 </Panel>
                 <Panel header="Outward" eventKey="2">Panel 2 content</Panel>

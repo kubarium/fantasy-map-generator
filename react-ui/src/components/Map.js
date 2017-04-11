@@ -2,7 +2,7 @@ import '../styles/Tile.css'
 
 import React, {Component} from 'react'
 
-import Tile from './Tile'
+import Tile from '../containers/Tile'
 import className from 'classnames'
 
 class Map extends Component {
@@ -10,18 +10,21 @@ class Map extends Component {
 
     }
     render() {
-        const tiles = [...Array(64).keys()].map((x, x_index) => [...Array(64).keys()].map((y, y_index) => (
+        //const tiles = [...Array(64).keys()].map((x, x_index) => [...Array(64).keys()].map((y, y_index) => (
+        const tiles = this.props.tiles.map(tile => (
+            
             <li
                 className={className({
                 tile: true,
-                [`tile-${x_index}-${y_index}`]: true
+                [`tile-${tile.id}`]: true,
+                selected:tile.id===this.props.selectedTile
             })}
-                key={`${x_index}-${y_index}`}>
-                <span className="tile-label">{`${x_index}-${y_index}`}</span>
-                <Tile/>
+                key={`${tile.id}`}>
+                <Tile id={`${tile.id}`} layers={tile.layers}/>
+                <span className="tile-label">{`${tile.id}`}</span>
             </li>
 
-        )))
+        ))
         return (
             <div className="map">
                 <ul>

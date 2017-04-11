@@ -17,7 +17,7 @@ class Map extends Component {
                 className={className({
                 tile: true,
                 [`tile-${tile.id}`]: true,
-                selected:tile.id===this.props.selectedTile
+                selected:tile.selected
             })}
                 key={`${tile.id}`}>
                 <Tile id={`${tile.id}`} layers={tile.layers}/>

@@ -16,11 +16,11 @@ class Pieces extends Component {
         return (
             <PanelGroup defaultActiveKey="1" accordion className="pieces">
                 <Panel header="Side Pieces" eventKey="1">
-                    <ListGroup >
+                    <ListGroup onClick={(event)=>this.props.addLayer(event)}>
                         {this
                             .props
                             .pieces
-                            .map((piece, index) => <ListGroupItem listItem={false} onClick={(event)=>console.log(event)} key={`piece-${index}`}><img src={`/pieces/${piece}`}/></ListGroupItem>)}
+                            .map((piece, index) => <ListGroupItem listItem={true} type="button" key={`piece-${index}`}><img src={`/pieces/${piece}`} data-piece={piece}/></ListGroupItem>)}
                     </ListGroup>
                 </Panel>
                 <Panel header="Outward" eventKey="2">Panel 2 content</Panel>

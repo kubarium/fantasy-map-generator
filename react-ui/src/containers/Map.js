@@ -5,8 +5,7 @@ import { connect } from 'react-redux'
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        tiles: state.tiles,
-        selectedTile:state.selectedTile
+        tiles: state.tiles
     }
 }
 

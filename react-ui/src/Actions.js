@@ -2,6 +2,7 @@ export const PIECES = "pieces"
 export const PIECES_SUCCESS = "piecesSuccess"
 export const PIECES_FAILURE = "piecesFailure"
 export const SELECT_TILE = "selectTile"
+export const ADD_LAYER = "addLayer"
 
 import axios from 'axios'
 
@@ -21,6 +22,11 @@ export function piecesSuccess(data) {
 export function piecesFailure(error){
     return {type:PIECES_FAILURE, error}
 }
+
 export function selectTile(id){
     return {type:SELECT_TILE, id}
+}
+
+export function addLayer(piece){
+    return {type:ADD_LAYER, piece}
 }

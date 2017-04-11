@@ -13,6 +13,10 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         loadPieces: () => {           
             dispatch(Actions.pieces())
+        },
+        addLayer: (layer) => {
+            console.log(layer)
+            //dispatch(Actions.addLayer(layer))
         }
     }
 }

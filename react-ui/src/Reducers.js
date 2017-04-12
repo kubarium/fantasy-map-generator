@@ -1,6 +1,7 @@
 import * as Actions from './Actions'
 
 const reducers = (state, action) => {
+    let tiles = []
     switch (action.type) {
         case Actions.PIECES_SUCCESS:            
             return {
@@ -10,7 +11,7 @@ const reducers = (state, action) => {
         case Actions.PIECES_FAILURE:
             throw new Error(action.error)
         case Actions.SELECT_TILE:
-            const tiles = state.tiles.slice()
+            tiles = state.tiles.slice()
             const tile = tiles.filter(tile=>tile.id===action.id)[0]
             const tileIndex = tiles.findIndex(tile=>tile.id===action.id)
             
@@ -23,14 +24,15 @@ const reducers = (state, action) => {
                 tiles
             }
         case Actions.ADD_LAYER:
-            const selectedTiles = state.tiles.filter(tile => tile.selected)
+            tiles = state.tiles.slice()
+            const selectedTiles = tiles.filter(tile => tile.selected)
             
             selectedTiles.forEach((tile, index, array) => {
                 tile.layers.unshift(action.layer)
             })
             return {
                 ...state,
-                selectedTiles
+                tiles
             }
         default:
             return state

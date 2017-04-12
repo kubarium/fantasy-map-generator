@@ -15,8 +15,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
             dispatch(Actions.pieces())
         },
         addLayer: (layer) => {
-            console.log(layer)
-            //dispatch(Actions.addLayer(layer))
+            dispatch(Actions.addLayer(layer))
         }
     }
 }

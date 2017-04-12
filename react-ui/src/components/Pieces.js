@@ -16,7 +16,7 @@ class Pieces extends Component {
         return (
             <PanelGroup defaultActiveKey="1" accordion className="pieces">
                 <Panel header="Side Pieces" eventKey="1">
-                    <ListGroup onClick={(event)=>this.props.addLayer(event)}>
+                    <ListGroup onClick={(event)=>this.props.addLayer(event.target.getAttribute("data-piece"))}>
                         {this
                             .props
                             .pieces

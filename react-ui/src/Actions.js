@@ -27,6 +27,6 @@ export function selectTile(id){
     return {type:SELECT_TILE, id}
 }
 
-export function addLayer(piece){
-    return {type:ADD_LAYER, piece}
+export function addLayer(layer){
+    return {type:ADD_LAYER, layer}
 }
